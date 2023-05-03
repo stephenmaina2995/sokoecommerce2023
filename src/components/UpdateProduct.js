@@ -1,29 +1,31 @@
 import React from 'react'
 
-function Main() {
-  const handleSubmit=()=> {
-    console.log(handleSubmit);
-  };
+function UpdateProduct() {
+    const handleSubmitChanges=() => {
+        console.log(handleSubmitChanges)
+    };
   return (
-    <form onSubmit={handleSubmit} className="form">
+    <div>
+      <form onSubmit={handleSubmitChanges} className="form">
         <input
           type="text"
           name="productname"
           placeholder="Product Name"
           required
-        />        <input type="number" name="price" placeholder="Price" required />
-
+        />
+        <input type="number" name="price" placeholder="Price" required />
         <input
           type="text"
           name="category"
-          placeholder="Description"
+          placeholder="Category"
           required
         />
         <input type="number" name="quantity" placeholder="Quantity" required />
         <input type="text" name="img" placeholder="Image URL" required />
-        <button type="submit">Add Product</button>
+        <button type="submit">Edit Product</button>
       </form>
+    </div>
   )
 }
 
-export default Main
+export default UpdateProduct

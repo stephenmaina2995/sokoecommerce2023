@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Basket() {
+function CheckoutForm() {
   return (
     <div>
-        Basket
+      
     </div>
   )
 }
 
-export default Basket
+export default CheckoutForm
