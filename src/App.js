@@ -7,6 +7,7 @@ import "./App.css";
 import CartList from "./components/CartList";
 import UpdateProduct from "./components/UpdateProduct";
 import { Routes, Route } from "react-router-dom";
+import Category from "./components/Category";
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -15,8 +16,8 @@ function App() {
   const [category, setCategory] = useState("all"); // Added category state
 
   const addProduct = (newproduct) => {
-    setProduct([...product, newproduct])
-  }
+    setProduct([...product, newproduct]);
+  };
 
   const addToCart = (data) => {
     setCart([...cart, { ...data, quantity: 1 }]);
@@ -32,25 +33,48 @@ function App() {
     setShowCart(value);
   };
 
-  const handleCategoryChange = (event) => { // Added category change handler
+  const handleCategoryChange = (event) => {
+    // Added category change handler
     setCategory(event.target.value);
-  }
+  };
 
-  const filteredProducts = category === "all" ? product : product.filter(p => p.category === category); // Filter products by category
+  const filteredProducts =
+    category === "all"
+      ? product
+      : product.filter((p) => p.category === category); // Filter products by category
 
   return (
     <div>
-      <Header count={cart.length} handleShow={handleShow} onCategoryChange={handleCategoryChange}/> {/* Added onCategoryChange prop */}
+      <Header
+        count={cart.length}
+        handleShow={handleShow}
+        onCategoryChange={handleCategoryChange}
+      />{" "}
+      {/* Added onCategoryChange prop */}
+      <Category />
       <Main>
         <Routes>
-          <Route path="/" element={<ProductList product={filteredProducts} addToCart={addToCart} addProduct={addProduct}/>}/>
+          <Route
+            path="/"
+            element={
+              <ProductList
+                product={filteredProducts}
+                addToCart={addToCart}
+                addProduct={addProduct}
+              />
+            }
+          />
         </Routes>
       </Main>
-      <UpdateProduct/>
+      <UpdateProduct />
       {showCart ? (
         <CartList cart={cart} />
       ) : (
-        <ProductList product={filteredProducts} addToCart={addToCart} addProduct={addProduct}/> // Pass filtered products to ProductList
+        <ProductList
+          product={filteredProducts}
+          addToCart={addToCart}
+          addProduct={addProduct}
+        /> // Pass filtered products to ProductList
       )}
     </div>
   );

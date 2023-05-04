@@ -4,7 +4,7 @@
       "id": 1,
       "productname": "Dell Inspiron 15 ",
       "price": "40000",
-      "category": "Intel Core i3-7130U 8GB 1TB HDD 15.6 HD LED Win 10 Laptop",
+      "category": "Laptop",
       "quantity": "20",
       "img": "https://mcphilipsdigital.co.ke/wp-content/uploads/2020/06/1526055338000_IMG_987063.jpg"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "productname": "HP ",
       "price": "95000",
-      "category": "HP Spectre x360 13.5",
+      "category": "Laptop",
       "quantity": "20",
       "img": "https://cdn.thewirecutter.com/wp-content/media/2022/10/laptopstopicpage-2048px-2027.jpg?auto=webp&quality=75&width=980&dpr=2"
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "productname": "Huawei P20 Pro ",
       "price": "40",
-      "category": "Smart Phone",
+      "category": "Smartphone",
       "quantity": "20",
       "img": "https://i.insider.com/5c07ebd14b676b01f52cb98e?width=1000&format=jpeg&auto=webp"
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "productname": "Asus Zenfone 9 ",
       "price": "18900",
-      "category": "Smart Phone",
+      "category": "Smartphone",
       "quantity": "20",
       "img": "https://www.techadvisor.com/wp-content/uploads/2022/07/Asus-Zenfone-9_review.jpg?resize=1024%2C576&quality=50&strip=all"
     },

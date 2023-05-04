@@ -48,3 +48,18 @@
 .product-item{
   padding: 20px;
 }
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#category-list {
+  padding: 5px;
+}
+.main{
+  margin-top: 5%;
+}
+input{
+  height:30px;
+  width: 20%;
+}
